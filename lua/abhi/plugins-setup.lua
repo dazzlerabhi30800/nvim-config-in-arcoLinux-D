@@ -115,9 +115,10 @@ local plugins = {
 	-- for colorizer
 	"norcalli/nvim-colorizer.lua",
 
-	--for zen mode / centered layout
 	-- Lua
 	"ellisonleao/gruvbox.nvim",
+	-- catppuccin theme
+	{ "catppuccin/nvim", name = "catppuccin" },
 
 	--for zoom in neovide
 	"drzel/vim-gui-zoom",
