@@ -20,8 +20,8 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<A-N>", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<A-P>", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<A-n>", ":tabn<CR>") --  go to next tab
+keymap.set("n", "<A-p>", ":tabp<CR>") --  go to previous tab
 
 -- for the moving line up and down
 vim.keymap.set("n", "<A-j>", ":m +1<CR>==", { noremap = true })
@@ -87,3 +87,5 @@ mapKey("n", "<leader>7", ":BufferLineGoToBuffer 7<CR>", { noremap = true, silent
 -- vim.g.user_emmet_mode = "a"
 vim.g.user_emmet_leader_key = "<Tab>"
 -- vim.g.user_emmet_expandabrr_key = "<Tab>"
+
+-- additional config for emmet

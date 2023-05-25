@@ -3,15 +3,49 @@ if not status then
 	return
 end
 
+local colors = {
+	blue = "#80a0ff",
+	cyan = "#79dac8",
+	black = "#080808",
+	white = "#c6c6c6",
+	red = "#ff5189",
+	violet = "#d183e8",
+	grey = "#303030",
+}
+
+local bubbles_theme = {
+	normal = {
+		a = { fg = colors.black, bg = colors.violet },
+		b = { fg = colors.white, bg = colors.grey },
+		c = { fg = colors.white, bg = "none" },
+	},
+
+	insert = { a = { fg = colors.black, bg = colors.blue } },
+	visual = { a = { fg = colors.black, bg = colors.cyan } },
+	replace = { a = { fg = colors.black, bg = colors.red } },
+
+	inactive = {
+		a = { fg = colors.white, bg = "none" },
+		b = { fg = colors.white, bg = "none" },
+		c = { fg = colors.white, bg = "none" },
+	},
+}
+
+vim.bubbly_palette = {
+	background = "none",
+}
+
 lualine.setup({
 	options = {
 		icons_enabled = true,
-		theme = "auto",
+		theme = bubbles_theme,
 		-- section_separators = { left = "", right = "" },
 		-- component_separators = { left = "", right = "" },
-		component_separators = "",
-		section_separators = { left = "", right = "" },
+		-- component_separators = "",
+		-- section_separators = { left = "", right = "" },
 		disabled_filetypes = {},
+		component_separators = "|",
+		section_separators = { left = "", right = "" },
 	},
 	sections = {
 		-- lualine_a = { "mode", { "buffers" } },
@@ -48,7 +82,18 @@ lualine.setup({
 		},
 		lualine_x = { "location" },
 		lualine_y = {},
-		lualine_z = {},
+		lualine_z = {
+			{
+				function()
+					for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+						if vim.api.nvim_buf_get_option(buf, "modified") then
+							return "eol" -- any message or icon
+						end
+					end
+					return ""
+				end,
+			},
+		},
 	},
 	tabline = {},
 	extensions = { "fugitive" },

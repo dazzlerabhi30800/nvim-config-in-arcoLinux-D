@@ -47,6 +47,7 @@ local plugins = {
 
 	-- statusline
 	"nvim-lualine/lualine.nvim",
+	"datwaft/bubbly.nvim",
 
 	-- fuzzy finding w/ telescope
 	{
@@ -110,7 +111,18 @@ local plugins = {
 	}, -- autoclose parens, brackets, quotes, etc...
 
 	-- for emmet
-	"mattn/emmet-vim",
+	{
+		"mattn/emmet-vim",
+		config = function()
+			vim.g.user_emmet_jsx = 1
+			vim.g.user_emmet_settings = {
+				indent_blockelement = 1,
+				javascript = {
+					extends = "jsx",
+				},
+			}
+		end,
+	},
 
 	-- for colorizer
 	"norcalli/nvim-colorizer.lua",
@@ -121,17 +133,19 @@ local plugins = {
 	{ "catppuccin/nvim", name = "catppuccin" },
 
 	--for zoom in neovide
-	"drzel/vim-gui-zoom",
+	-- "drzel/vim-gui-zoom",
+	-- "dhruvasagar/vim-zoom",
 	"navarasu/onedark.nvim",
 	-- ("folke/lazy.nvim")
 	"Shatur/neovim-ayu",
 	"folke/tokyonight.nvim",
+	--vs code theme
+	"Mofiqul/vscode.nvim",
 
 	--for tabs bufferline
 	"akinsho/nvim-bufferline.lua",
 
 	-- vs code theme
-	"martinsione/darkplus.nvim",
 	"nyoom-engineering/oxocarbon.nvim",
 
 	-- for startup screen
