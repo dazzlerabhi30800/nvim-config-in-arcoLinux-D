@@ -24,7 +24,7 @@ opt.smartcase = true
 -- appearance
 opt.termguicolors = true
 opt.background = "dark"
---opt.signcolumn = "yes"
+opt.signcolumn = "yes"
 
 -- backspace
 opt.backspace = "indent,eol,start"
@@ -40,7 +40,7 @@ opt.iskeyword:append("-")
 
 -- set cursor to line on insert mode
 -- opt.guicursor = "a:block-Cursor/lCursor"
--- opt.guicursor = "n-v-c:block-Cursor/lCursor,i-cr:hor10,r-cr:hor10,o:hor10"
+opt.guicursor = "n-v-c:block-Cursor/lCursor,i-cr:hor10,r-cr:hor10,o:hor10"
 -- opt.guicursor = "n-v-c:block-Cursor/lCursor,i-cr:ver10,r-cr:ver10,o:ver10"
 -- opt.guicursor = "n-v-c:blinkon0-Cursor/lCursor,i-cr:block-cursor,r-cr:block-cursor,o:ver20"
 --

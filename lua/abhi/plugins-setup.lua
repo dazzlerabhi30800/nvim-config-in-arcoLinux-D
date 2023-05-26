@@ -131,6 +131,8 @@ local plugins = {
 	"ellisonleao/gruvbox.nvim",
 	-- catppuccin theme
 	{ "catppuccin/nvim", name = "catppuccin" },
+	-- Material Theme
+	{ "marko-cerovac/material.nvim" },
 
 	--for zoom in neovide
 	-- "drzel/vim-gui-zoom",
