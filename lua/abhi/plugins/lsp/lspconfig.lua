@@ -62,6 +62,12 @@ lspconfig["html"].setup({
 	on_attach = on_attach,
 })
 
+-- configure json server
+lspconfig["jsonls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
 -- configure typescript server with plugin
 typescript.setup({
 	disable_commands = false,

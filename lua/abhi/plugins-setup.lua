@@ -133,6 +133,10 @@ local plugins = {
 	{ "catppuccin/nvim", name = "catppuccin" },
 	-- Material Theme
 	{ "marko-cerovac/material.nvim" },
+	-- Palenight Theme
+	{
+		"JoosepAlviste/palenightfall.nvim",
+	},
 
 	--for zoom in neovide
 	-- "drzel/vim-gui-zoom",
@@ -149,6 +153,23 @@ local plugins = {
 
 	-- vs code theme
 	"nyoom-engineering/oxocarbon.nvim",
+
+	-- noice nvim
+	{
+		"folke/noice.nvim",
+		event = "VeryLazy",
+		opts = {
+			-- add any options here
+		},
+		dependencies = {
+			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+			"MunifTanjim/nui.nvim",
+			-- OPTIONAL:
+			--   `nvim-notify` is only needed, if you want to use the notification view.
+			--   If not available, we use `mini` as the fallback
+			"rcarriga/nvim-notify",
+		},
+	},
 
 	-- for startup screen
 	{

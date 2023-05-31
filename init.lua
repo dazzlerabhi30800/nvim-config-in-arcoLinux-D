@@ -21,3 +21,9 @@ require("abhi.plugins.bufferline")
 require("abhi.plugins.alpha")
 require("abhi.plugins.lsp.lspkind")
 require("abhi.plugins.material")
+require("abhi.plugins.noice")
+-- require("abhi.plugins.vscode")
+
+require("notify").setup({
+	background_colour = "#020228",
+})

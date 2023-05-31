@@ -1,6 +1,6 @@
-vim.cmd("colorscheme oxocarbon")
+vim.cmd("colorscheme palenightfall")
 
-local status, _ = pcall(vim.cmd, "colorscheme oxocarbon")
+local status, _ = pcall(vim.cmd, "colorscheme palenightfall")
 if not status then
 	print("Colorscheme not found")
 end

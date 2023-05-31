@@ -29,6 +29,7 @@ mason_lspconfig.setup({
 		-- "tailwindcss",
 		"lua_ls",
 		"quick_lint_js",
+		"jsonls",
 		-- "cssmodules_ls",
 	},
 	-- auto-install configured servers (with lspconfig)

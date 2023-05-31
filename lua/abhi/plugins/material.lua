@@ -71,6 +71,6 @@ require("material").setup({
 
 --Lua:
 vim.cmd("colorscheme material")
-vim.g.material_style = "deep ocean"
+vim.g.material_style = "palenight"
 
 -- vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-cr:hor10,r-cr:hor10,o:hor10"

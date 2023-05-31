@@ -55,6 +55,7 @@ treesitter.setup({
 		"dockerfile",
 		"gitignore",
 		"scss",
+		"regex",
 	},
 	-- auto install above language parsers
 	auto_install = true,
