@@ -42,8 +42,8 @@ keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>") -- toggle file explorer
 
 -- for neovide zoom
 local mapKey = vim.api.nvim_set_keymap
-mapKey("n", "<C-p>", ":ZoomIn<CR>", { noremap = true, silent = true })
-mapKey("n", "<C-m>", ":ZoomOut<CR>", { noremap = true, silent = true })
+-- mapKey("n", "<C-p>", ":ZoomIn<CR>", { noremap = true, silent = true })
+-- mapKey("n", "<C-m>", ":ZoomOut<CR>", { noremap = true, silent = true })
 
 -- for colorizer
 mapKey("n", "<C-w>", ":ColorizerToggle<CR>", { noremap = true, silent = true })
@@ -89,3 +89,5 @@ vim.g.user_emmet_leader_key = "<Tab>"
 -- vim.g.user_emmet_expandabrr_key = "<Tab>"
 
 -- additional config for emmet
+mapKey("v", "<A-F>", ":fold<CR>", { noremap = true, silent = true })
+mapKey("v", "<A-f-o>", ":foldclose<CR>", { noremap = true, silent = true })

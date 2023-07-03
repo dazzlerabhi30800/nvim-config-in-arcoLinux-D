@@ -4,12 +4,12 @@ if not status then
 end
 
 local colors = {
-	blue = "#80a0ff",
+	blue = "#b5fc6d",
 	cyan = "#79dac8",
 	black = "#080808",
 	white = "#c6c6c6",
 	red = "#ff5189",
-	violet = "#d183e8",
+	violet = "#63AcfD",
 	grey = "#303030",
 }
 
@@ -17,7 +17,7 @@ local bubbles_theme = {
 	normal = {
 		a = { fg = colors.black, bg = colors.violet },
 		b = { fg = colors.white, bg = colors.grey },
-		c = { fg = colors.white, bg = "none" },
+		c = { fg = colors.white, bg = colors.grey },
 	},
 
 	insert = { a = { fg = colors.black, bg = colors.blue } },
@@ -39,13 +39,13 @@ lualine.setup({
 	options = {
 		icons_enabled = true,
 		theme = bubbles_theme,
-		-- section_separators = { left = "", right = "" },
+		section_separators = { left = "", right = "" },
 		-- component_separators = { left = "", right = "" },
 		-- component_separators = "",
 		-- section_separators = { left = "", right = "" },
 		disabled_filetypes = {},
 		component_separators = "|",
-		section_separators = { left = "", right = "" },
+		-- section_separators = { left = "", right = "" },
 	},
 	sections = {
 		-- lualine_a = { "mode", { "buffers" } },
@@ -63,8 +63,8 @@ lualine.setup({
 				"diagnostics",
 				sources = { "nvim_diagnostic" },
 				symbols = { error = " ", warn = " ", info = " ", hint = " " },
-				require("noice").api.statusline.mode.get,
-				cond = require("noice").api.statusline.mode.has,
+				--require("noice").api.statusline.mode.get,
+				--cond = require("noice").api.statusline.mode.has,
 				color = { fg = "#ff9e64" },
 			},
 			"encoding",

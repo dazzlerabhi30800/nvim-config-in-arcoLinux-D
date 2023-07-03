@@ -10,6 +10,10 @@ opt.shiftwidth = 2
 opt.expandtab = true
 opt.autoindent = true
 
+-- disable commenting the next line automatically
+vim.opt_local.formatoptions:remove({ "r", "o" })
+vim.cmd([[autocmd FileType * set formatoptions-=ro]])
+
 --aditional configuration
 opt.cmdheight = 1
 opt.laststatus = 2

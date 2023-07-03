@@ -152,28 +152,37 @@ local plugins = {
 	"akinsho/nvim-bufferline.lua",
 
 	-- vs code theme
-	"nyoom-engineering/oxocarbon.nvim",
+	-- "nyoom-engineering/oxocarbon.nvim",
+	"B4mbus/oxocarbon-lua.nvim",
+	-- { "katawful/kat.nvim", tag = "3.1" },
 
 	-- noice nvim
-	{
-		"folke/noice.nvim",
-		event = "VeryLazy",
-		opts = {
-			-- add any options here
-		},
-		dependencies = {
-			-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
-			"MunifTanjim/nui.nvim",
-			-- OPTIONAL:
-			--   `nvim-notify` is only needed, if you want to use the notification view.
-			--   If not available, we use `mini` as the fallback
-			"rcarriga/nvim-notify",
-		},
-	},
+	-- {
+	-- 	"folke/noice.nvim",
+	-- 	event = "VeryLazy",
+	-- 	opts = {
+	-- 		-- add any options here
+	-- 	},
+	-- 	dependencies = {
+	-- 		-- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		-- OPTIONAL:
+	-- 		--   `nvim-notify` is only needed, if you want to use the notification view.
+	-- 		--   If not available, we use `mini` as the fallback
+	-- 		-- "rcarriga/nvim-notify",
+	-- 	},
+	-- },
 
 	-- for startup screen
 	{
 		"goolord/alpha-nvim",
+	},
+	-- code folding
+	{
+		"anuvyklack/pretty-fold.nvim",
+		config = function()
+			require("pretty-fold").setup()
+		end,
 	},
 }
 

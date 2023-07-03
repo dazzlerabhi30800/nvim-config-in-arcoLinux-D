@@ -1,7 +1,7 @@
 require("abhi.plugins-setup")
 require("abhi.core.keymaps")
 require("abhi.core.options")
--- require("abhi.core.colorscheme")
+--require("abhi.core.colorscheme")
 require("abhi.plugins.nvim-tree")
 require("abhi.plugins.lualine")
 require("abhi.plugins.comment")
@@ -20,10 +20,21 @@ require("abhi.plugins.better-comments")
 require("abhi.plugins.bufferline")
 require("abhi.plugins.alpha")
 require("abhi.plugins.lsp.lspkind")
-require("abhi.plugins.material")
-require("abhi.plugins.noice")
--- require("abhi.plugins.vscode")
+require("abhi.plugins.vscode")
 
-require("notify").setup({
-	background_colour = "#020228",
-})
+-- require("abhi.plugins.material")
+-- require("abhi.plugins.neosolarized")
+-- require("abhi.plugins.noice")
+
+-- require("notify").setup({
+-- 	-- background_colour = "#020228",
+-- 	background_colour = "FloatShadow",
+-- 	stage = "slide",
+-- 	timeout = 1000,
+-- 	render = "minimal",
+-- 	minimum_width = 6,
+-- 	-- max_width = 20,
+-- 	fps = 60,
+-- })
+--
+--
